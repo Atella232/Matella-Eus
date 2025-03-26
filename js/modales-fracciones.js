@@ -306,7 +306,7 @@ document.addEventListener('DOMContentLoaded', () => {
         `,
         'problemas-fracciones': `
             <div class="modal-header">
-                <h2>📝 Arazoen Ebazpena</h2>
+                <h2>📝 Problemen Ebazpena</h2>
                 <button class="btn-cerrar-modal">&times;</button>
             </div>
             <div class="modal-body">
@@ -388,7 +388,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 
                 <div class="ejemplo-problema">
                     <div class="problema">
-                        <p><strong>Problema:</strong> 60 minutuko klasean 3/5 ikasten dira teoria, eta 45 minutuko klasean 2/3 ikasten dira teoria. Zein klasetan ikasten da teoria gehiago minututan?</p>
+                        <p><strong>Problema:</strong> 60 minutuko klasean 3/5 ikasten da teoria, eta 45 minutuko klasean 2/3 ikasten da teoria. Zein klasetan ikasten da teoria gehiago minututan?</p>
                     </div>
                     
                     <div class="solucion">
@@ -404,31 +404,32 @@ document.addEventListener('DOMContentLoaded', () => {
                         </div>
                         
                         <div class="visual-container">
-                            <svg width="320" height="150" viewBox="0 0 320 150">
-                                <!-- First class -->
-                                <rect x="20" y="20" width="120" height="30" fill="none" stroke="#333" stroke-width="2"/>
-                                <rect x="20" y="20" width="72" height="30" fill="#b3d9ff" fill-opacity="0.7"/>
-                                <text x="80" y="60" font-size="14" text-anchor="middle">60 minutuko klasea: 3/5 = 36 min</text>
-                                
-                                <!-- Second class -->
-                                <rect x="180" y="20" width="90" height="30" fill="none" stroke="#333" stroke-width="2"/>
-                                <rect x="180" y="20" width="60" height="30" fill="#d9b3ff" fill-opacity="0.7"/>
-                                <text x="225" y="60" font-size="14" text-anchor="middle">45 minutuko klasea: 2/3 = 30 min</text>
-                                
-                                <!-- Comparison -->
-                                <rect x="20" y="80" width="72" height="20" fill="#b3d9ff" fill-opacity="0.7" stroke="#333" stroke-width="1"/>
-                                <text x="56" y="95" font-size="12" text-anchor="middle">36 min</text>
-                                
-                                <rect x="20" y="110" width="60" height="20" fill="#d9b3ff" fill-opacity="0.7" stroke="#333" stroke-width="1"/>
-                                <text x="50" y="125" font-size="12" text-anchor="middle">30 min</text>
-                                
-                                <text x="170" y="105" font-size="16" text-anchor="middle">Ondorioa: 36 min > 30 min</text>
-                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 250">
+    <!-- First class -->
+    <rect x="20" y="20" width="240" height="40" fill="none" stroke="#333" stroke-width="2"/>
+    <rect x="20" y="20" width="144" height="40" fill="#b3d9ff" fill-opacity="0.7"/>
+    <text x="140" y="75" font-size="16" text-anchor="middle">60 minutuko klasea: 3/5 = 36 min</text>
+    
+    <!-- Second class -->
+    <rect x="340" y="20" width="180" height="40" fill="none" stroke="#333" stroke-width="2"/>
+    <rect x="340" y="20" width="120" height="40" fill="#d9b3ff" fill-opacity="0.7"/>
+    <text x="430" y="75" font-size="16" text-anchor="middle">45 minutuko klasea: 2/3 = 30 min</text>
+    
+    <!-- Comparison -->
+    <rect x="100" y="120" width="144" height="30" fill="#b3d9ff" fill-opacity="0.7" stroke="#333" stroke-width="1"/>
+    <text x="172" y="140" font-size="16" text-anchor="middle">36 min</text>
+    
+    <rect x="100" y="170" width="120" height="30" fill="#d9b3ff" fill-opacity="0.7" stroke="#333" stroke-width="1"/>
+    <text x="160" y="190" font-size="16" text-anchor="middle">30 min</text>
+    
+    <text x="350" y="150" font-size="18" font-weight="bold" text-anchor="middle">Ondorioa: 36 min > 30 min</text>
+    <text x="300" y="220" font-size="18" font-weight="bold" text-anchor="middle">60 minutuko klasean teoria gehiago ikasten da</text>
+</svg>
                         </div>
                     </div>
                 </div>
                 
-                <h3>Praktikatzeko arazoak</h3>
+                <h3>Praktikatzeko problemak</h3>
                 <ol>
                     <li>Erosketarako 50€ baduzu eta 2/5 gastatu badituzu, zenbat diru geratzen zaizu?</li>
                     <li>Pizza bat 8 zati berdinetan banatu da. 3 zati jan dira. Zatien zenbakizko zenbat zati geratzen dira?</li>
