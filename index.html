@@ -2,105 +2,13 @@
 <html lang="eu">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Matematika 1. DBH - Teoria eta Ariketak</title>
     <link rel="stylesheet" href="css/styles.css">
     <script src="js/main.js" defer></script>
     <meta name="description" content="Matematikako hezkuntza-baliabideak 1. DBH-rako">
     <meta name="keywords" content="matematika, DBH, hezkuntza, ariketak, teoria">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📐</text></svg>">
-    <style>
-        /* Estilos para móvil */
-        @media screen and (max-width: 767px) {
-            .logo-titulo h1 {
-                font-size: 1.5rem;
-                text-align: center;
-            }
-            
-            .navbar {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .navbar-logo {
-                margin-bottom: 10px;
-                text-align: center;
-            }
-            
-            .navbar-menu {
-                display: none;
-                width: 100%;
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .navbar-menu.active {
-                display: flex;
-            }
-            
-            .navbar-item {
-                padding: 10px;
-                width: 100%;
-                box-sizing: border-box;
-                text-decoration: none;
-                color: inherit;
-                display: block;
-            }
-            
-            .dropdown {
-                width: 100%;
-            }
-            
-            .dropdown-btn {
-                display: block;
-                width: 100%;
-                text-align: center;
-                padding: 10px;
-            }
-            
-            .dropdown-content {
-                display: none;
-                position: static;
-                width: 100%;
-                background-color: #f1f1f1;
-                box-shadow: none;
-                margin-top: 5px;
-            }
-            
-            .dropdown:hover .dropdown-content,
-            .dropdown-content.active {
-                display: block;
-            }
-            
-            .dropdown-content a {
-                padding: 10px;
-                text-align: center;
-                display: block;
-                text-decoration: none;
-                color: inherit;
-            }
-            
-            .menu-toggle {
-                display: block;
-                cursor: pointer;
-                font-size: 1.5rem;
-                padding: 10px;
-                z-index: 1000;
-                position: relative;
-            }
-        }
-        
-        /* Estilos para PC (por defecto) */
-        .menu-toggle {
-            display: none;
-        }
-        
-        @media screen and (min-width: 768px) {
-            .navbar-menu {
-                display: flex;
-            }
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -108,8 +16,7 @@
             <h1>Matematika 1. DBH</h1>
         </div>
         <nav class="navbar" aria-label="Nabigazio nagusia">
-            <a href="index.html" class="navbar-logo">Matematika 1. DBH</a>
-            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+            <a href="index.html" class="navbar-logo">Matematika 1. DBH&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
             <div class="navbar-menu">
                 <a href="index.html" class="navbar-item">Hasiera</a>
                 <div class="dropdown">
@@ -193,14 +100,5 @@
         <p>2025 Matematika 1. DBH - Eskubide guztiak erreserbatuta</p>
         <p>❤️ Bihotzez garatua Derrigorrezko Bigarren Hezkuntzako ikasleentzat</p>
     </footer>
-
-    <script>
-        function toggleMenu() {
-            const navbarMenu = document.querySelector('.navbar-menu');
-            const dropdownContent = document.querySelector('.dropdown-content');
-            navbarMenu.classList.toggle('active');
-            dropdownContent.classList.toggle('active');
-        }
-    </script>
 </body>
 </html>
