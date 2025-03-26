@@ -393,7 +393,7 @@ const modalContents = {
                         
                         <!-- Paso 2: Realizar la operación final -->
                         <g transform="translate(80, 210)">
-                            <text x="0" y="25" font-size="14" font-weight="bold" text-anchor="start" fill="#d81b60">2. Pausua: Azken eragiketa egin</text>
+                            <text x="0" y="25" font-size="14" font-weight="bold" text-anchor="start" fill="#d81b60">2. Pausua: Azken eragiketa</text>
                             
                             <rect x="200" y="0" width="40" height="40" fill="#e0f7fa" stroke="#0097a7" stroke-width="1"></rect>
                             <text x="220" y="25" font-size="16" text-anchor="middle">9</text>
@@ -410,7 +410,6 @@ const modalContents = {
                         </g>
                         
                         <!-- Línea conectora entre pasos -->
-                        <line x1="410" y1="170" x2="320" y2="210" stroke="#d81b60" stroke-width="2" stroke-dasharray="5,2"></line>
                     </svg>
                     <p style="font-style: italic; margin-top: 5px;">Parentesiekin, lehenengo parentesi barruko eragiketa ebazten da, ondoren gainerako eragiketak</p>
                 </div>

@@ -435,7 +435,7 @@ const modalContents = {
                 
                 <div class="visual-aid">
                     <svg width="400" height="250" xmlns="http://www.w3.org/2000/svg">
-                        <text x="200" y="30" text-anchor="middle" font-weight="bold" font-size="16">Gutxieneko Multiplo Komuna (g.m.k.)</text>
+                        <text x="200" y="30" text-anchor="middle" font-weight="bold" font-size="16">Multiplo Komun Txikiena (M.K.T.)</text>
                         
                         <!-- 12 eta 18ren multiploak -->
                         <rect x="20" y="50" width="170" height="40" rx="5" fill="#e6f7ff" stroke="#333" />
@@ -519,7 +519,7 @@ const modalContents = {
                 
                 <div class="visual-aid">
                     <svg width="400" height="250" xmlns="http://www.w3.org/2000/svg">
-                        <text x="200" y="30" text-anchor="middle" font-weight="bold" font-size="16">Zatitzaile Komun Handiena (z.k.h.)</text>
+                        <text x="200" y="30" text-anchor="middle" font-weight="bold" font-size="16">Zatitzaile Komun Handiena (Z.K.H.)</text>
                         
                         <!-- 12 eta 18ren zatitzaileak -->
                         <rect x="20" y="50" width="170" height="40" rx="5" fill="#e6f7ff" stroke="#333" />
