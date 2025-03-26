@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="eu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aljebra - Matematika 1. DBH</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="../js/main.js" defer></script>
+    <meta name="description" content="Aljebraren teoria eta kontzeptuak 1. DBH">
+    <meta name="keywords" content="matematika, aljebra, adierazpen aljebraikoak, ekuazioak">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔢</text></svg>">
+</head>
+<body>
+    <header>
+        <div class="logo-titulo">
+            <h1>Aljebra</h1>
+        </div>
+        <nav class="navbar">
+            <a href="../index.html" class="navbar-logo">Aljebra&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+            <div class="navbar-menu">
+                <a href="../index.html" class="navbar-item">Hasiera</a>
+                <div class="dropdown">
+                    <a href="#" class="navbar-item dropdown-btn">Gaiak</a>
+                    <div class="dropdown-content">
+                        <a href="numeros-naturales.html">Zenbaki Naturalak</a>
+                        <a href="divisibilidad.html">Zatigarritasuna</a>
+                        <a href="numeros-enteros.html">Zenbaki Osoak</a>
+                        <a href="fracciones.html">Zatikiak</a>
+                        <a href="algebra.html" class="active">Aljebra</a>
+                        <a href="../paginas/geometria.html">Geometria</a>
+                        <a href="../paginas/tablas-graficas.html">Taulak eta Grafikoak</a>
+                        <a href="../paginas/estadistica.html">Estatistika</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="teoria-numeros" class="seccion-contenedor">
+            <h2>Aljebra</h2>
+            
+            <div class="tarjetas-secciones">
+                <div class="tarjeta" data-modal="letras-numeros">
+                    <h3>🧩 Letra zenbakien ordez</h3>
+                    <p>Ezezagunak eta aldagaiak erabiltzea</p>
+                    <a href="#" class="btn btn-mas-informacion abrir-modal">Informazio Gehiago</a>
+                </div>
+                <div class="tarjeta" data-modal="expresiones-algebraicas">
+                    <h3>🔤 Aljebraren adierazpenak</h3>
+                    <p>Zenbaki, letra eta eragiketen konbinazioa</p>
+                    <a href="#" class="btn btn-mas-informacion abrir-modal">Informazio Gehiago</a>
+                </div>
+                <div class="tarjeta" data-modal="suma-resta-monomios">
+                    <h3>➕ Monomioen batuketa eta kenketak</h3>
+                    <p>Antzeko terminoekin eragiketak</p>
+                    <a href="#" class="btn btn-mas-informacion abrir-modal">Informazio Gehiago</a>
+                </div>
+                <div class="tarjeta" data-modal="multiplicacion-monomios">
+                    <h3>✖️ Monomioen biderketa</h3>
+                    <p>Termino aljebraikoak biderkatzeko arauak</p>
+                    <a href="#" class="btn btn-mas-informacion abrir-modal">Informazio Gehiago</a>
+                </div>
+                <div class="tarjeta" data-modal="multiplicacion-monomio-suma">
+                    <h3>🔢 Monomioaren biderketa batuketarekin</h3>
+                    <p>Banaketa propietatea aplikatzea</p>
+                    <a href="#" class="btn btn-mas-informacion abrir-modal">Informazio Gehiago</a>
+                </div>
+                <div class="tarjeta" data-modal="division-monomios">
+                    <h3>➗ Monomioen zatiketa</h3>
+                    <p>Kofiziente eta esponentzien sinplifikazioa</p>
+                    <a href="#" class="btn btn-mas-informacion abrir-modal">Informazio Gehiago</a>
+                </div>
+                <div class="tarjeta" data-modal="ecuaciones">
+                    <h3>🟰 Ekuazioak</h3>
+                    <p>Ezezagunak dituzten berdintasunak</p>
+                    <a href="#" class="btn btn-mas-informacion abrir-modal">Informazio Gehiago</a>
+                </div>
+                <div class="tarjeta" data-modal="tecnicas-ecuaciones">
+                    <h3>🔍 Ekuazioak ebazteko teknikak</h3>
+                    <p>Ezezagunak askatzeko pausoak</p>
+                    <a href="#" class="btn btn-mas-informacion abrir-modal">Informazio Gehiago</a>
+                </div>
+                <div class="tarjeta" data-modal="ecuaciones-primer-grado">
+                    <h3>📐 Lehen mailako ekuazioak</h3>
+                    <p>Ezezagun bakarreko ekuazioak</p>
+                    <a href="#" class="btn btn-mas-informacion abrir-modal">Informazio Gehiago</a>
+                </div>
+                <div class="tarjeta" data-modal="problemas-ecuaciones">
+                    <h3>💡 Ekuazioekin arazoak</h3>
+                    <p>Aljebraren aplikazio praktikoak</p>
+                    <a href="#" class="btn btn-mas-informacion abrir-modal">Informazio Gehiago</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="herramientas-interactivas" class="seccion-contenedor">
+            <h2>Tresna Interaktiboak</h2>
+            <div class="herramientas">
+                <div class="herramienta">
+                    <h3>Ekuazioen Kalkulagailua</h3>
+                    <div class="calculadora">
+                        <input type="text" id="ecuacion" placeholder="Adibidea: 2x + 5 = 15">
+                        <button onclick="resolverEcuacion()">Ebatzi</button>
+                        <p id="resultado">Emaitza: </p>
+                    </div>
+                </div>
+                <div class="herramienta">
+                    <h3>Aljebraren Quiz-a</h3>
+                    <div class="quiz">
+                        <p id="pregunta-quiz">Zein da x balioa ekuazio honetan 3x - 4 = 8?</p>
+                        <div class="opciones-quiz">
+                            <button onclick="verificarRespuesta(2)">2</button>
+                            <button onclick="verificarRespuesta(4)">4</button>
+                            <button onclick="verificarRespuesta(6)">6</button>
+                            <button onclick="verificarRespuesta(12)">12</button>
+                        </div>
+                        <p id="resultado-quiz"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modales -->
+    <div id="modal-letras-numeros" class="modal-overlay">
+        <div class="modal-contenido"></div>
+    </div>
+    <div id="modal-expresiones-algebraicas" class="modal-overlay">
+        <div class="modal-contenido"></div>
+    </div>
+    <div id="modal-suma-resta-monomios" class="modal-overlay">
+        <div class="modal-contenido"></div>
+    </div>
+    <div id="modal-multiplicacion-monomios" class="modal-overlay">
+        <div class="modal-contenido"></div>
+    </div>
+    <div id="modal-multiplicacion-monomio-suma" class="modal-overlay">
+        <div class="modal-contenido"></div>
+    </div>
+    <div id="modal-division-monomios" class="modal-overlay">
+        <div class="modal-contenido"></div>
+    </div>
+    <div id="modal-ecuaciones" class="modal-overlay">
+        <div class="modal-contenido"></div>
+    </div>
+    <div id="modal-tecnicas-ecuaciones" class="modal-overlay">
+        <div class="modal-contenido"></div>
+    </div>
+    <div id="modal-ecuaciones-primer-grado" class="modal-overlay">
+        <div class="modal-contenido"></div>
+    </div>
+    <div id="modal-problemas-ecuaciones" class="modal-overlay">
+        <div class="modal-contenido"></div>
+    </div>
+
+    <footer>
+        <p> 2025 Matematika 1. DBH - Aljebraren Atala</p>
+        <p>❤️ Bihotzez garatua Derrigorrezko Bigarren Hezkuntzako ikasleentzat</p>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/modales-algebra.js"></script>
+</body>
+</html>
