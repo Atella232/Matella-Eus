@@ -322,7 +322,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <div class="pasos">
                             <p><strong>1. Pausoa:</strong> Kantitate osoa identifikatu: 20 €</p>
                             <p><strong>2. Pausoa:</strong> Zatia adierazi: 3/4</p>
-                            <p><strong>3. Pausoa:</strong> Kalkulatu: 20 € × 3/4 = (20 × 3) ÷ 4 = 60 ÷ 4 = 15 €</p>
+                            <p><strong>3. Pausoa:</strong> Kalkulatu: 20 € × 3/4 = (20 ÷ 4) × 3 = 5 × 3 = 15 €</p>
                         </div>
                         
                         <div class="visual-container">
