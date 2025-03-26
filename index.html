@@ -12,43 +12,26 @@
     <style>
         /* Estilos para móvil */
         @media screen and (max-width: 767px) {
-            body {
-                margin: 0;
-                padding: 0;
-                overflow-x: hidden;
-            }
-
             .logo-titulo h1 {
                 font-size: 1.5rem;
                 text-align: center;
-                padding: 10px;
-                margin: 0;
             }
             
             .navbar {
-                display: flex;
                 flex-direction: column;
-                align-items: stretch;
-                width: 100%;
-                margin: 0;
-                padding: 0;
+                align-items: center;
             }
             
             .navbar-logo {
+                margin-bottom: 10px;
                 text-align: center;
-                padding: 10px;
-                font-size: 1.2rem;
-                background-color: #f0f0f0;
-                text-decoration: none;
-                color: inherit;
             }
             
             .navbar-menu {
                 display: none;
-                flex-direction: column;
                 width: 100%;
-                margin: 0;
-                padding: 0;
+                flex-direction: column;
+                text-align: center;
             }
             
             .navbar-menu.active {
@@ -56,11 +39,12 @@
             }
             
             .navbar-item {
-                padding: 15px;
-                text-align: center;
-                border-bottom: 1px solid #e0e0e0;
+                padding: 10px;
+                width: 100%;
+                box-sizing: border-box;
                 text-decoration: none;
                 color: inherit;
+                display: block;
             }
             
             .dropdown {
@@ -71,16 +55,16 @@
                 display: block;
                 width: 100%;
                 text-align: center;
+                padding: 10px;
             }
             
             .dropdown-content {
                 display: none;
                 position: static;
                 width: 100%;
-                background-color: #f9f9f9;
+                background-color: #f1f1f1;
                 box-shadow: none;
-                margin: 0;
-                padding: 0;
+                margin-top: 5px;
             }
             
             .dropdown:hover .dropdown-content,
@@ -89,38 +73,20 @@
             }
             
             .dropdown-content a {
-                display: block;
-                padding: 15px;
+                padding: 10px;
                 text-align: center;
-                border-bottom: 1px solid #e0e0e0;
+                display: block;
                 text-decoration: none;
                 color: inherit;
             }
             
             .menu-toggle {
                 display: block;
-                text-align: center;
-                padding: 15px;
-                background-color: #f0f0f0;
                 cursor: pointer;
                 font-size: 1.5rem;
-            }
-            
-            #presentacion, #secciones {
-                padding: 15px;
-            }
-            
-            .tarjetas-secciones {
-                grid-template-columns: 1fr;
-            }
-            
-            .tarjeta {
-                margin-bottom: 15px;
-            }
-            
-            footer {
-                padding: 15px;
-                text-align: center;
+                padding: 10px;
+                z-index: 1000;
+                position: relative;
             }
         }
         
@@ -231,7 +197,9 @@
     <script>
         function toggleMenu() {
             const navbarMenu = document.querySelector('.navbar-menu');
+            const dropdownContent = document.querySelector('.dropdown-content');
             navbarMenu.classList.toggle('active');
+            dropdownContent.classList.toggle('active');
         }
     </script>
 </body>
