@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aljebra - Matematika 1. DBH</title>
     <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/herramientas.css">
     <script src="../js/main.js" defer></script>
     <meta name="description" content="Aljebraren teoria eta kontzeptuak 1. DBH">
     <meta name="keywords" content="matematika, aljebra, adierazpen aljebraikoak, ekuazioak">
@@ -96,27 +97,104 @@
 
         <section id="herramientas-interactivas" class="seccion-contenedor">
             <h2>Tresna Interaktiboak</h2>
-            <div class="herramientas">
-                <div class="herramienta">
-                    <h3>Ekuazioen Kalkulagailua</h3>
-                    <div class="calculadora">
-                        <input type="text" id="ecuacion" placeholder="Adibidea: 2x + 5 = 15">
-                        <button onclick="resolverEcuacion()">Ebatzi</button>
-                        <p id="resultado">Emaitza: </p>
-                    </div>
+            
+            <!-- Ekuazioen Ebazlea -->
+            <div class="herramienta-card">
+                <div class="herramienta-header">
+                    <h3>Ekuazioen Ebazlea</h3>
+                    <p>Lehen mailako ekuazioak ebatzi eta pausoak ikusi</p>
                 </div>
-                <div class="herramienta">
-                    <h3>Aljebraren Quiz-a</h3>
-                    <div class="quiz">
-                        <p id="pregunta-quiz">Zein da x balioa ekuazio honetan 3x - 4 = 8?</p>
-                        <div class="opciones-quiz">
-                            <button onclick="verificarRespuesta(2)">2</button>
-                            <button onclick="verificarRespuesta(4)">4</button>
-                            <button onclick="verificarRespuesta(6)">6</button>
-                            <button onclick="verificarRespuesta(12)">12</button>
+                <div class="herramienta-content">
+                    <div class="input-group">
+                        <div class="input-field">
+                            <label for="ekuazioa-input">Sartu ekuazioa:</label>
+                            <input type="text" id="ekuazioa-input" placeholder="Adib: 2x + 3 = 5x - 7">
                         </div>
-                        <p id="resultado-quiz"></p>
+                        <button class="btn-primario" onclick="ebatziEkuazioa()">Ebatzi</button>
                     </div>
+                    <div id="ekuazioa-emaitza" class="emaitza-container"></div>
+                    <div id="ekuazioa-pausoak" class="pausoak-container"></div>
+                    <div id="ekuazioa-azalpena" class="azalpena-container"></div>
+                </div>
+            </div>
+            
+            <!-- Adierazpen Aljebraikoen Kalkulagailua -->
+            <div class="herramienta-card">
+                <div class="herramienta-header">
+                    <h3>Adierazpen Aljebraikoen Kalkulagailua</h3>
+                    <p>Adierazpen aljebraikoak ebaluatu x-ren balio batekin</p>
+                </div>
+                <div class="herramienta-content">
+                    <div class="input-group">
+                        <div class="input-field">
+                            <label for="adierazpena-input">Adierazpen aljebraikoa:</label>
+                            <input type="text" id="adierazpena-input" placeholder="Adib: 2x + 3">
+                        </div>
+                        <div class="input-field">
+                            <label for="x-balioa-input">x-ren balioa:</label>
+                            <input type="number" id="x-balioa-input" placeholder="Adib: 5">
+                        </div>
+                        <button class="btn-primario" onclick="kalkulatuAdierazpena()">Kalkulatu</button>
+                    </div>
+                    <div id="adierazpena-emaitza" class="emaitza-container"></div>
+                    <div id="adierazpena-azalpena" class="azalpena-container"></div>
+                </div>
+            </div>
+            
+            <!-- Monomioen Eragiketak -->
+            <div class="herramienta-card">
+                <div class="herramienta-header">
+                    <h3>Monomioen Eragiketak</h3>
+                    <p>Monomioen arteko eragiketak kalkulatu eta pausoak ikusi</p>
+                </div>
+                <div class="herramienta-content">
+                    <div class="input-group">
+                        <div class="input-field">
+                            <label for="monomio1-input">Lehenengo monomioa:</label>
+                            <input type="text" id="monomio1-input" placeholder="Adib: 3x²">
+                        </div>
+                        <div class="input-field">
+                            <label for="eragiketa-select">Eragiketa:</label>
+                            <select id="eragiketa-select">
+                                <option value="batu">Batu (+)</option>
+                                <option value="kendu">Kendu (-)</option>
+                                <option value="biderkatu">Biderkatu (×)</option>
+                                <option value="zatitu">Zatitu (÷)</option>
+                            </select>
+                        </div>
+                        <div class="input-field">
+                            <label for="monomio2-input">Bigarren monomioa:</label>
+                            <input type="text" id="monomio2-input" placeholder="Adib: 5x²">
+                        </div>
+                        <button class="btn-primario" onclick="kalkulatuMonomioak()">Kalkulatu</button>
+                    </div>
+                    <div id="monomioak-emaitza" class="emaitza-container"></div>
+                    <div id="monomioak-azalpena" class="azalpena-container"></div>
+                </div>
+            </div>
+            
+            <!-- Ekuazioen Problemak -->
+            <div class="herramienta-card">
+                <div class="herramienta-header">
+                    <h3>Ekuazioen Problemak</h3>
+                    <p>Ekuazioekin problemak ebatzi eta pausoak ikusi</p>
+                </div>
+                <div class="herramienta-content">
+                    <div class="input-group">
+                        <div class="input-field">
+                            <label for="problema-select">Aukeratu problema:</label>
+                            <select id="problema-select">
+                                <option value="">-- Aukeratu problema bat --</option>
+                                <option value="adina">Adina kalkulatzeko problema</option>
+                                <option value="dirua">Dirua banatzeko problema</option>
+                                <option value="abiadura">Abiadura eta denbora problema</option>
+                            </select>
+                        </div>
+                        <button class="btn-primario" onclick="ebatziProblema()">Ebatzi</button>
+                    </div>
+                    <div id="problema-emaitza" class="emaitza-container"></div>
+                    <div id="problema-azalpena" class="azalpena-container"></div>
+                    <div id="problema-pausoak" class="pausoak-container"></div>
                 </div>
             </div>
         </section>
@@ -161,5 +239,6 @@
 
     <script src="../js/main.js"></script>
     <script src="../js/modales-algebra.js"></script>
+    <script src="../js/herramienta-aljebra.js"></script>
 </body>
 </html>
