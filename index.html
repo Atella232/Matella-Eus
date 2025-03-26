@@ -10,79 +10,89 @@
     <meta name="keywords" content="matematika, DBH, hezkuntza, ariketak, teoria">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📐</text></svg>">
     <style>
-        /* Mobile-first styles */
-        body {
-            font-size: 16px;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-        }
-
-        .navbar {
-            flex-direction: column;
-            align-items: center;
-            background-color: #f0f0f0;
-        }
-
-        .navbar-menu {
-            display: none; /* Hide menu by default */
-            width: 100%;
-            text-align: center;
-        }
-
-        .mobile-menu-toggle {
-            display: block;
-            cursor: pointer;
-            padding: 10px;
-            font-size: 24px;
-        }
-
-        .dropdown-content {
-            position: static;
-            display: none;
-            background-color: #f9f9f9;
-            width: 100%;
-        }
-
-        .dropdown:hover .dropdown-content,
-        .dropdown-content.active {
-            display: block;
-        }
-
-        #mobile-content, #desktop-content {
-            display: none;
-        }
-
-        #mobile-content.active, #desktop-content.active {
-            display: block;
-        }
-
-        /* Desktop styles */
-        @media screen and (min-width: 768px) {
-            body {
-                font-size: 18px;
+        /* Estilos para móvil */
+        @media screen and (max-width: 767px) {
+            .logo-titulo h1 {
+                font-size: 1.5rem;
+                text-align: center;
             }
-
+            
             .navbar {
-                flex-direction: row;
-                justify-content: space-between;
-            }
-
-            .navbar-menu {
-                display: flex;
+                flex-direction: column;
                 align-items: center;
             }
-
-            .mobile-menu-toggle {
-                display: none;
+            
+            .navbar-logo {
+                margin-bottom: 10px;
+                text-align: center;
             }
-
-            .dropdown-content {
-                position: absolute;
+            
+            .navbar-menu {
                 display: none;
-                min-width: 200px;
-                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                width: 100%;
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .navbar-menu.active {
+                display: flex;
+            }
+            
+            .navbar-item {
+                padding: 10px;
+                width: 100%;
+                box-sizing: border-box;
+            }
+            
+            .dropdown {
+                width: 100%;
+            }
+            
+            .dropdown-content {
+                position: static;
+                width: 100%;
+                box-shadow: none;
+                margin-top: 5px;
+            }
+            
+            .dropdown-content a {
+                padding: 8px 15px;
+                text-align: center;
+            }
+            
+            .menu-toggle {
+                display: block;
+                cursor: pointer;
+                font-size: 1.5rem;
+                padding: 10px;
+            }
+            
+            #presentacion, #secciones {
+                padding: 15px;
+            }
+            
+            .tarjetas-secciones {
+                grid-template-columns: 1fr;
+            }
+            
+            .tarjeta {
+                margin-bottom: 15px;
+            }
+            
+            footer {
+                padding: 15px;
+                text-align: center;
+            }
+        }
+        
+        /* Estilos para PC (por defecto) */
+        .menu-toggle {
+            display: none;
+        }
+        
+        @media screen and (min-width: 768px) {
+            .navbar-menu {
+                display: flex;
             }
         }
     </style>
@@ -94,7 +104,7 @@
         </div>
         <nav class="navbar" aria-label="Nabigazio nagusia">
             <a href="index.html" class="navbar-logo">Matematika 1. DBH</a>
-            <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰ Menu</div>
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
             <div class="navbar-menu">
                 <a href="index.html" class="navbar-item">Hasiera</a>
                 <div class="dropdown">
@@ -115,7 +125,7 @@
     </header>
 
     <main>
-        <section id="desktop-content">
+        <section id="presentacion">
             <h2>Ongi etorri 1. DBH-ko Matematikako Gidara</h2>
             <div class="teoria">
                 <p>Plataforma honetan baliabide hezigarriak aurkituko dituzu matematika ulertzeko eta menperatzeko. Atal bakoitzak honako hauek ditu:</p>
@@ -125,61 +135,50 @@
                     <li>Ikaskuntza indartzeko erreminta interaktiboak</li>
                 </ul>
             </div>
-            <section id="secciones">
-                <h2>Esploratu Atalak</h2>
-                <div class="tarjetas-secciones">
-                    <div class="tarjeta">
-                        <h3>🔢 Zenbaki Naturalak</h3>
-                        <p>Zenbakien sarrera eta oinarrizko propietateak.</p>
-                        <a href="./paginas/numeros-naturales.html" class="btn">Ikusi Atala</a>
-                    </div>
-                    <div class="tarjeta">
-                        <h3>➗ Zatigarritasuna</h3>
-                        <p>Zatigarritasunaren kontzeptuak, biderkagaiak eta zatitzaileak.</p>
-                        <a href="./paginas/divisibilidad.html" class="btn">Ikusi Atala</a>
-                    </div>
-                    <div class="tarjeta">
-                        <h3>🎲 Zenbaki Osoak</h3>
-                        <p>Zenbaki positiboak, negatiboak eta eragiketak.</p>
-                        <a href="./paginas/numeros-enteros.html" class="btn">Ikusi Atala</a>
-                    </div>
-                    <div class="tarjeta">
-                        <h3>🧩 Zatikiak</h3>
-                        <p>Zatikiak erabiltzen ikasi, haien eragiketak eta aplikazioak.</p>
-                        <a href="./paginas/fracciones.html" class="btn">Ikusi Atala</a>
-                    </div>
-                    <div class="tarjeta">
-                        <h3>🧮 Aljebra</h3>
-                        <p>Aldagaiak, monomioak, adierazpenak eta ekuazioak aurkezten dira.</p>
-                        <a href="./paginas/algebra.html" class="btn">Ikusi Atala</a>
-                    </div>
-                    <div class="tarjeta">
-                        <h3>📐 Geometria</h3>
-                        <p>Formak, neurriak eta propietate geometrikoak.</p>
-                        <a href="./paginas/geometria.html" class="btn">Ikusi Atala</a>
-                    </div>
-                    <div class="tarjeta">
-                        <h3>📈 Taulak eta Grafikoak</h3>
-                        <p>Datu estatistikoen bistaratzea eta azterketa.</p>
-                        <a href="./paginas/tablas-graficas.html" class="btn">Ikusi Atala</a>
-                    </div>
-                    <div class="tarjeta">
-                        <h3>🤖 Matella ChatGPT</h3>
-                        <p>Euskaraz lagunduko dizun adimen artifiziala.</p>
-                        <a href="https://chatgpt.com/g/g-67d38635fb0c81919668655bdd91d6f7-matella-euskeraz" class="btn">Sartu</a>
-                    </div>
-                </div>
-            </section>
         </section>
 
-        <section id="mobile-content">
-            <h2>Matematika Gida Mugikorrean</h2>
-            <div class="mobile-teoria">
-                <p>Matematika ikasteko tresna errazak eta azkarrak</p>
-                <div class="quick-access-buttons">
-                    <button onclick="location.href='./paginas/numeros-naturales.html'">Zenbaki Naturalak</button>
-                    <button onclick="location.href='./paginas/divisibilidad.html'">Zatigarritasuna</button>
-                    <button onclick="location.href='./paginas/numeros-enteros.html'">Zenbaki Osoak</button>
+        <section id="secciones">
+            <h2>Esploratu Atalak</h2>
+            <div class="tarjetas-secciones">
+                <div class="tarjeta">
+                    <h3>🔢 Zenbaki Naturalak</h3>
+                    <p>Zenbakien sarrera eta oinarrizko propietateak.</p>
+                    <a href="./paginas/numeros-naturales.html" class="btn">Ikusi Atala</a>
+                </div>
+                <div class="tarjeta">
+                    <h3>➗ Zatigarritasuna</h3>
+                    <p>Zatigarritasunaren kontzeptuak, biderkagaiak eta zatitzaileak.</p>
+                    <a href="./paginas/divisibilidad.html" class="btn">Ikusi Atala</a>
+                </div>
+                <div class="tarjeta">
+                    <h3>🎲 Zenbaki Osoak</h3>
+                    <p>Zenbaki positiboak, negatiboak eta eragiketak.</p>
+                    <a href="./paginas/numeros-enteros.html" class="btn">Ikusi Atala</a>
+                </div>
+                <div class="tarjeta">
+                    <h3>🧩 Zatikiak</h3>
+                    <p>Zatikiak erabiltzen ikasi, haien eragiketak eta aplikazioak.</p>
+                    <a href="./paginas/fracciones.html" class="btn">Ikusi Atala</a>
+                </div>
+                <div class="tarjeta">
+                    <h3>🧮 Aljebra</h3>
+                    <p>Aldagaiak, monomioak, adierazpenak eta ekuazioak aurkezten dira.</p>
+                    <a href="./paginas/algebra.html" class="btn">Ikusi Atala</a>
+                </div>
+                <div class="tarjeta">
+                    <h3>📐 Geometria</h3>
+                    <p>Formak, neurriak eta propietate geometrikoak.</p>
+                    <a href="./paginas/geometria.html" class="btn">Ikusi Atala</a>
+                </div>
+                <div class="tarjeta">
+                    <h3>📈 Taulak eta Grafikoak</h3>
+                    <p>Datu estatistikoen bistaratzea eta azterketa.</p>
+                    <a href="./paginas/tablas-graficas.html" class="btn">Ikusi Atala</a>
+                </div>
+                <div class="tarjeta">
+                    <h3>🤖 Matella ChatGPT</h3>
+                    <p>Euskaraz lagunduko dizun adimen artifiziala.</p>
+                    <a href="https://chatgpt.com/g/g-67d38635fb0c81919668655bdd91d6f7-matella-euskeraz" class="btn">Sartu</a>
                 </div>
             </div>
         </section>
@@ -191,30 +190,10 @@
     </footer>
 
     <script>
-        function toggleMobileMenu() {
+        function toggleMenu() {
             const navbarMenu = document.querySelector('.navbar-menu');
-            const dropdownContent = document.querySelector('.dropdown-content');
             navbarMenu.classList.toggle('active');
-            dropdownContent.classList.toggle('active');
         }
-
-        function detectDevice() {
-            const isMobile = window.innerWidth < 768;
-            const desktopContent = document.getElementById('desktop-content');
-            const mobileContent = document.getElementById('mobile-content');
-
-            if (isMobile) {
-                desktopContent.classList.remove('active');
-                mobileContent.classList.add('active');
-            } else {
-                mobileContent.classList.remove('active');
-                desktopContent.classList.add('active');
-            }
-        }
-
-        // Run on load and resize
-        window.addEventListener('load', detectDevice);
-        window.addEventListener('resize', detectDevice);
     </script>
 </body>
 </html>
