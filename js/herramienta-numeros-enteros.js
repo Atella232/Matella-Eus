@@ -225,10 +225,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const respuestaUsuario = parseInt(valorRespuesta);
         
         if (respuestaUsuario === ejercicioActual.resultadoCorrecto) {
-            mensajeResultado.textContent = '¡Correcto!';
+            mensajeResultado.textContent = '¡Erantzun ZUZENA!';
             mensajeResultado.style.color = 'green';
         } else {
-            mensajeResultado.textContent = '¡Incorrecto! Inténtalo de nuevo';
+            mensajeResultado.textContent = 'EZ DA ZUZENA! Saiatu berriro';
             mensajeResultado.style.color = 'red';
         }
         

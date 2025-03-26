@@ -225,34 +225,40 @@ document.addEventListener('DOMContentLoaded', () => {
                             <span style="font-size: 18px; font-weight: bold;">+4 – 9 = –5</span>
                         </div>
                         <div style="display: flex; justify-content: center; margin-bottom: 10px; align-items: center;">
-                            <svg width="360" height="80" viewBox="0 0 360 80">
-                                <!-- Flecha para el primer número -->
-                                <line x1="180" y1="40" x2="220" y2="40" stroke="#4caf50" stroke-width="2" />
+                            <svg width="360" height="120" viewBox="0 0 360 120">
+                                <!-- Escala numérica -->
+                                <line x1="30" y1="60" x2="330" y2="60" stroke="black" stroke-width="2" />
+                                <text x="180" y="80" text-anchor="middle" font-size="12">0</text>
+                                <line x1="180" y1="55" x2="180" y2="65" stroke="black" stroke-width="1" />
+                                <text x="220" y="80" text-anchor="middle" font-size="12">+4</text>
+                                <line x1="220" y1="55" x2="220" y2="65" stroke="black" stroke-width="1" />
+                                <text x="260" y="80" text-anchor="middle" font-size="12">+8</text>
+                                <line x1="260" y1="55" x2="260" y2="65" stroke="black" stroke-width="1" />
+                                <text x="140" y="80" text-anchor="middle" font-size="12">-4</text>
+                                <line x1="140" y1="55" x2="140" y2="65" stroke="black" stroke-width="1" />
+                                <text x="100" y="80" text-anchor="middle" font-size="12">-8</text>
+                                <line x1="100" y1="55" x2="100" y2="65" stroke="black" stroke-width="1" />
+                                
+                                <!-- Punto de inicio -->
+                                <circle cx="180" cy="60" r="3" fill="black" />
+                                
+                                <!-- Primer movimiento: +4 (empezando desde 0) -->
+                                <line x1="180" y1="40" x2="220" y2="40" stroke="#4caf50" stroke-width="3" />
                                 <polygon points="215,40 210,35 210,45" fill="#4caf50" />
                                 <text x="200" y="30" text-anchor="middle" font-size="14" fill="#4caf50">+4</text>
+                                <line x1="220" y1="40" x2="220" y2="60" stroke="#4caf50" stroke-width="1" stroke-dasharray="3,3" />
                                 
-                                <!-- Flecha para el segundo número -->
-                                <line x1="180" y1="40" x2="90" y2="40" stroke="#f44336" stroke-width="2" />
-                                <polygon points="95,40 100,35 100,45" fill="#f44336" />
-                                <text x="135" y="30" text-anchor="middle" font-size="14" fill="#f44336">-9</text>
+                                <!-- Segundo movimiento: -9 (empezando desde +4) -->
+                                <line x1="220" y1="90" x2="130" y2="90" stroke="#f44336" stroke-width="3" />
+                                <polygon points="135,90 140,85 140,95" fill="#f44336" />
+                                <text x="175" y="105" text-anchor="middle" font-size="14" fill="#f44336">-9</text>
+                                <line x1="220" y1="60" x2="220" y2="90" stroke="#f44336" stroke-width="1" stroke-dasharray="3,3" />
+                                <line x1="130" y1="60" x2="130" y2="90" stroke="#f44336" stroke-width="1" stroke-dasharray="3,3" />
                                 
-                                <!-- Flecha para el resultado -->
-                                <line x1="180" y1="60" x2="130" y2="60" stroke="#673ab7" stroke-width="3" />
-                                <polygon points="135,60 140,55 140,65" fill="#673ab7" />
-                                <text x="155" y="75" text-anchor="middle" font-size="16" font-weight="bold" fill="#673ab7">-5</text>
-                                
-                                <!-- Escala numérica -->
-                                <line x1="30" y1="40" x2="330" y2="40" stroke="black" stroke-width="1" />
-                                <text x="180" y="55" text-anchor="middle" font-size="12">0</text>
-                                <line x1="180" y1="35" x2="180" y2="45" stroke="black" stroke-width="1" />
-                                <text x="220" y="55" text-anchor="middle" font-size="12">+4</text>
-                                <line x1="220" y1="35" x2="220" y2="45" stroke="black" stroke-width="1" />
-                                <text x="260" y="55" text-anchor="middle" font-size="12">+8</text>
-                                <line x1="260" y1="35" x2="260" y2="45" stroke="black" stroke-width="1" />
-                                <text x="140" y="55" text-anchor="middle" font-size="12">-4</text>
-                                <line x1="140" y1="35" x2="140" y2="45" stroke="black" stroke-width="1" />
-                                <text x="100" y="55" text-anchor="middle" font-size="12">-8</text>
-                                <line x1="100" y1="35" x2="100" y2="45" stroke="black" stroke-width="1" />
+                                <!-- Resultado -->
+                                <circle cx="130" cy="60" r="4" fill="#673ab7" stroke="black" stroke-width="1" />
+                                <text x="130" y="20" text-anchor="middle" font-size="16" font-weight="bold" fill="#673ab7">-5</text>
+                                <line x1="130" y1="22" x2="130" y2="55" stroke="#673ab7" stroke-width="2" stroke-dasharray="4,2" />
                             </svg>
                         </div>
                     </div>
