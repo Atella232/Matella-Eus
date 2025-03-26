@@ -333,7 +333,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                 <line x1="150" y1="20" x2="150" y2="60" stroke="#333" stroke-width="1"/>
                                 <line x1="215" y1="20" x2="215" y2="60" stroke="#333" stroke-width="1"/>
                                 <rect x="20" y="20" width="195" height="40" fill="#a3d977" fill-opacity="0.7"/>
-                                <text x="150" y="90" font-size="16" text-anchor="middle">3/4 de 20€ = 15€</text>
+                                <text x="150" y="90" font-size="16" text-anchor="middle"> 20€-ren 3/4 = 15€</text>
                                 <text x="52.5" y="45" font-size="16" text-anchor="middle">5€</text>
                                 <text x="117.5" y="45" font-size="16" text-anchor="middle">5€</text>
                                 <text x="182.5" y="45" font-size="16" text-anchor="middle">5€</text>
