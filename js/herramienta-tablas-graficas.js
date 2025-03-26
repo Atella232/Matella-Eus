@@ -341,204 +341,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
     
-    // Función para generar un ejercicio de interpretar gráfica
-    function generarEjercicioInterpretarGrafica(dificultad) {
-        // Limpiar contenido anterior
-        descripcionEjercicio.textContent = '';
-        mensajeResultado.textContent = '';
-        explicacionSolucion.textContent = '';
-        respuestaInput.value = '';
-        
-        // Dibujar el plano cartesiano
-        const svg = dibujarPlanoCartesiano();
-        
-        // Definir escenarios según dificultad
-        let escenarios, escenarioElegido;
-        
-        // Escenarios básicos
-        const escenariosBasicos = [
-            {
-                titulo: "Eguneko tenperatura",
-                pregunta: "Zein ordutan lortu zen tenperatura maximoa?",
-                ejeX: "Eguneko ordua",
-                ejeY: "Tenperatura (°C)",
-                puntos: [
-                    {x: -4, y: 5}, // 8:00, 5°C
-                    {x: -2, y: 10}, // 10:00, 10°C
-                    {x: 0, y: 15}, // 12:00, 15°C
-                    {x: 2, y: 10}, // 14:00, 10°C
-                    {x: 4, y: 8} // 16:00, 8°C
-                ],
-                respuesta: "12:00",
-                explicacion: "Tenperaturak 15°C-ko maximo puntua lortzen du 12:00etan (x koordenatua = 0)."
-            },
-            {
-                titulo: "Landare baten hazkunde altuera",
-                pregunta: "Zenbat hazi zen landarea lehen hilabetean?",
-                ejeX: "Denbora (hilabeteak)",
-                ejeY: "Altuera (cm)",
-                puntos: [
-                    {x: -4, y: 0}, // 0 meses, 0 cm
-                    {x: -2, y: 3}, // 1 mes, 3 cm
-                    {x: 0, y: 8}, // 2 meses, 8 cm
-                    {x: 2, y: 12}, // 3 meses, 12 cm
-                    {x: 4, y: 15} // 4 meses, 15 cm
-                ],
-                respuesta: "3 cm",
-                explicacion: "Landarea 0 cm-tik 3 cm-ra hazi zen lehen hilabetean, 3 cm-ko hazkundea adierazten duena."
-            }
-        ];
-        
-        // Escenarios intermedios
-        const escenariosIntermedios = [
-            {
-                titulo: "Denda bateko hileko salmentak",
-                pregunta: "Zein hilabetetan gertatu zen salmentetan jaitsiera handiena?",
-                ejeX: "Hilabetea",
-                ejeY: "Salmentak (mila €)",
-                puntos: [
-                    {x: -4, y: 10}, // Enero, 10.000€
-                    {x: -2, y: 15}, // Febrero, 15.000€
-                    {x: 0, y: 8}, // Marzo, 8.000€
-                    {x: 2, y: 12}, // Abril, 12.000€
-                    {x: 4, y: 18} // Mayo, 18.000€
-                ],
-                respuesta: "Martxoa",
-                explicacion: "Jaitsiera handiena otsaila eta martxoa artean gertatu zen, non salmentak 15.000€-tik 8.000€-ra jaitsi ziren, 7.000€-ko jaitsiera."
-            },
-            {
-                titulo: "Txirrindulari batek egindako distantzia",
-                pregunta: "Zein tartean mantendu zuen txirrindulariak abiadura konstantea?",
-                ejeX: "Denbora (orduak)",
-                ejeY: "Distantzia (km)",
-                puntos: [
-                    {x: -4, y: 0}, // 0 horas, 0 km
-                    {x: -2, y: 10}, // 1 hora, 10 km
-                    {x: 0, y: 20}, // 2 horas, 20 km
-                    {x: 2, y: 30}, // 3 horas, 30 km
-                    {x: 4, y: 35} // 4 horas, 35 km
-                ],
-                respuesta: "0 eta 3 ordu bitartean",
-                explicacion: "0 eta 3 ordu bitartean, distantzia linealki handitzen da (10 km orduko), abiadura konstantea adierazten duena."
-            }
-        ];
-        
-        // Escenarios avanzados
-        const escenariosAvanzados = [
-            {
-                titulo: "Hiri bateko biztanleria (2010-2020)",
-                pregunta: "Zein izan zen batez besteko urteko hazkunde-tasa 2014 eta 2018 artean?",
-                ejeX: "Urtea",
-                ejeY: "Biztanleria (milaka)",
-                puntos: [
-                    {x: -4, y: 100}, // 2010, 100.000 habitantes
-                    {x: -2, y: 120}, // 2014, 120.000 habitantes
-                    {x: 0, y: 150}, // 2016, 150.000 habitantes
-                    {x: 2, y: 180}, // 2018, 180.000 habitantes
-                    {x: 4, y: 210} // 2020, 210.000 habitantes
-                ],
-                respuesta: "15 mila biztanle urteko",
-                explicacion: "2014 eta 2018 artean, biztanleria 120.000tik 180.000 biztanlera igo zen, 60.000ko igoera 4 urtetan, urteko batez beste 15.000 biztanleko tasa adierazten duena."
-            },
-            {
-                titulo: "Produktu baten prezioaren eboluzioa",
-                pregunta: "Zein izan zen prezioaren igoeraren ehunekoa puntu baxuenaren eta azkenaren artean?",
-                ejeX: "Hilabetea",
-                ejeY: "Prezioa (€)",
-                puntos: [
-                    {x: -4, y: 50}, // Mes 1, 50€
-                    {x: -2, y: 45}, // Mes 3, 45€
-                    {x: 0, y: 30}, // Mes 5, 30€
-                    {x: 2, y: 45}, // Mes 7, 45€
-                    {x: 4, y: 60} // Mes 9, 60€
-                ],
-                respuesta: "100%",
-                explicacion: "Prezio baxuena 30€ izan zen 5. hilabetean, eta azken prezioa 60€ izan zen 9. hilabetean. Horrek %100eko igoera adierazten du (prezioa bikoiztu egin zen)."
-            }
-        ];
-        
-        // Seleccionar escenario según dificultad
-        switch(dificultad) {
-            case 'facil':
-                escenarios = escenariosBasicos;
-                break;
-            case 'medio':
-                escenarios = escenariosIntermedios;
-                break;
-            case 'dificil':
-                escenarios = escenariosAvanzados;
-                break;
-            default:
-                escenarios = escenariosBasicos;
-        }
-        
-        // Elegir un escenario aleatorio
-        escenarioElegido = escenarios[Math.floor(Math.random() * escenarios.length)];
-        
-        // Dibujar los puntos y conectarlos
-        const puntos = escenarioElegido.puntos;
-        
-        // Dibujar línea que conecta los puntos
-        let pathData = '';
-        puntos.forEach((punto, index) => {
-            const coords = coordsToSVG(punto.x, punto.y);
-            if (index === 0) {
-                pathData += `M${coords.x},${coords.y}`;
-            } else {
-                pathData += ` L${coords.x},${coords.y}`;
-            }
-        });
-        
-        const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-        path.setAttribute('d', pathData);
-        path.setAttribute('stroke', 'blue');
-        path.setAttribute('stroke-width', '2');
-        path.setAttribute('fill', 'none');
-        svg.appendChild(path);
-        
-        // Dibujar los puntos
-        puntos.forEach((punto, index) => {
-            dibujarPunto(svg, punto.x, punto.y, 'red', 4);
-        });
-        
-        // Añadir título al gráfico
-        const titulo = document.createElementNS('http://www.w3.org/2000/svg', 'text');
-        titulo.setAttribute('x', PLANO_WIDTH / 2);
-        titulo.setAttribute('y', 20);
-        titulo.setAttribute('text-anchor', 'middle');
-        titulo.setAttribute('font-size', '14px');
-        titulo.setAttribute('font-weight', 'bold');
-        titulo.textContent = escenarioElegido.titulo;
-        svg.appendChild(titulo);
-        
-        // Reemplazar etiquetas de ejes
-        const ejeXLabel = svg.querySelector('text[text-content="X"]');
-        if (ejeXLabel) {
-            ejeXLabel.textContent = escenarioElegido.ejeX;
-            ejeXLabel.setAttribute('x', PLANO_WIDTH - 50);
-        }
-        
-        const ejeYLabel = svg.querySelector('text[text-content="Y"]');
-        if (ejeYLabel) {
-            ejeYLabel.textContent = escenarioElegido.ejeY;
-            ejeYLabel.setAttribute('y', 20);
-        }
-        
-        // Guardar información del ejercicio
-        ejercicioActual.tipo = 'interpretar-grafica';
-        ejercicioActual.puntos = puntos;
-        ejercicioActual.respuestaCorrecta = escenarioElegido.respuesta;
-        ejercicioActual.pregunta = escenarioElegido.pregunta;
-        ejercicioActual.explicacion = escenarioElegido.explicacion;
-        
-        // Mostrar descripción del ejercicio
-        descripcionEjercicio.textContent = escenarioElegido.pregunta;
-        
-        // Preparar el contenedor de respuesta
-        respuestaContenedor.style.display = 'block';
-        respuestaInput.placeholder = "Zure erantzuna";
-    }
-    
     // Función para generar ejercicio
     function generarEjercicio() {
         const tipoEjercicio = tipoEjercicioSelect.value;
@@ -550,9 +352,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 break;
             case 'dar-coordenadas':
                 generarEjercicioDarCoordenadas(dificultad);
-                break;
-            case 'interpretar-grafica':
-                generarEjercicioInterpretarGrafica(dificultad);
                 break;
             default:
                 console.error('Tipo de ejercicio no reconocido');
@@ -615,26 +414,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     mensaje = 'Formatu okerra. Mesedez, sartu koordenatuak (x, y) bezala.';
                 }
                 break;
-                
-            case 'interpretar-grafica':
-                const respuestaUsuario = respuestaInput.value.trim().toLowerCase();
-                const respuestaEsperada = ejercicioActual.respuestaCorrecta.toLowerCase();
-                
-                if (!respuestaUsuario) {
-                    mensaje = 'Mesedez, sartu zure erantzuna.';
-                    mensajeResultado.textContent = mensaje;
-                    mensajeResultado.style.color = 'red';
-                    return;
-                }
-                
-                // Para interpretar gráficas, aceptamos respuestas aproximadas o que contengan la respuesta correcta
-                if (respuestaUsuario === respuestaEsperada || respuestaUsuario.includes(respuestaEsperada) || respuestaEsperada.includes(respuestaUsuario)) {
-                    respuestaCorrecta = true;
-                    mensaje = 'Zuzen! ' + ejercicioActual.explicacion;
-                } else {
-                    mensaje = 'Oker. Erantzun zuzena: ' + ejercicioActual.respuestaCorrecta;
-                }
-                break;
         }
         
         // Mostrar resultado
@@ -649,9 +428,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     break;
                 case 'dar-coordenadas':
                     explicacionSolucion.textContent = 'Puntuak koordenatu hauek ditu (' + ejercicioActual.puntos[0].x + ', ' + ejercicioActual.puntos[0].y + ').';
-                    break;
-                case 'interpretar-grafica':
-                    explicacionSolucion.textContent = ejercicioActual.explicacion;
                     break;
             }
         } else {
@@ -683,11 +459,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Mostrar las coordenadas correctas
                 respuestaInput.value = ejercicioActual.respuestaCorrecta;
                 break;
-                
-            case 'interpretar-grafica':
-                // Mostrar la respuesta correcta
-                respuestaInput.value = ejercicioActual.respuestaCorrecta;
-                break;
         }
         
         // Mostrar explicación
@@ -700,9 +471,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 break;
             case 'dar-coordenadas':
                 explicacionSolucion.textContent = 'Puntuak koordenatu hauek ditu (' + ejercicioActual.puntos[0].x + ', ' + ejercicioActual.puntos[0].y + ').';
-                break;
-            case 'interpretar-grafica':
-                explicacionSolucion.textContent = ejercicioActual.explicacion;
                 break;
         }
     }

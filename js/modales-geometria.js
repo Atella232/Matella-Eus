@@ -388,131 +388,184 @@ const modalContents = {
     `,
     'pitagoras': `
         <div class="modal-content">
-            <div class="modal-section">
-                <h4>Definizioa</h4>
-                <p>Triangelu zuzen batean, hipotenusaren karratua katetoen karratuen baturaren berdina da.</p>
+    <div class="modal-section">
+        <h4>Definizioa</h4>
+        <p>Triangelu zuzen batean, hipotenusaren karratua katetoen karratuen baturaren berdina da.</p>
 
-                <div class="formula-container">
-                    <h4>Formula</h4>
-                    <p class="formula">a² = b² + c²</p>
-                    <ul>
-                        <li>a: hipotenusa (angelu zuzenaren aurkako aldea)</li>
-                        <li>b, c: katetoak</li>
-                    </ul>
-                </div>
+        <div class="formula-container">
+            <h4>Formula</h4>
+            <p class="formula">c² = a² + b²</p>
+            <ul>
+                <li>c: hipotenusa (angelu zuzenaren aurkako aldea)</li>
+                <li>a, b: katetoak</li>
+            </ul>
+        </div>
 
-                <h4>Aplikazioak</h4>
-                <ul>
-                    <li>Ezagutzen ez diren luzerak kalkulatu</li>
-                    <li>Azalera arazoak ebatzi</li>
-                    <li>Eraikuntza eta diseinuko aplikazioak</li>
-                </ul>
-
-                <h4>Adibide Praktikoa</h4>
-                <div class="modal-table-container">
-                    <table class="modal-table">
-                        <thead>
-                            <tr>
-                                <th>Katetoa b</th>
-                                <th>Katetoa c</th>
-                                <th>Hipotenusa a</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>3</td>
-                                <td>4</td>
-                                <td>5</td>
-                            </tr>
-                            <tr>
-                                <td>5</td>
-                                <td>12</td>
-                                <td>13</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+        <!-- Ilustración del Teorema de Pitágoras -->
+        <div class="ilustracion-container">
+            <h4>Ilustrazioa</h4>
+            <div class="pitagoras-ilustracion">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+                    <!-- Fondo -->
+                    <rect width="400" height="300" fill="#f8f9fa" rx="8" ry="8"/>
+                    
+                    <!-- Triángulo principal (3-4-5) -->
+                    <polygon points="100,200 100,120 180,200" fill="#FFD166" stroke="#444" stroke-width="2"/>
+                    
+                    <!-- Cuadrado sobre la hipotenusa (a) -->
+                    <polygon points="100,200 180,200 180,280 100,280" fill="#EF476F" fill-opacity="0.7" stroke="#444" stroke-width="2"/>
+                    
+                    <!-- Cuadrado sobre el cateto vertical (b) -->
+                    <polygon points="100,120 100,200 20,200 20,120" fill="#06D6A0" fill-opacity="0.7" stroke="#444" stroke-width="2"/>
+                    
+                    <!-- Cuadrado sobre el cateto horizontal (c) -->
+                    <polygon points="100,120 180,120 180,200 100,200" fill="#118AB2" fill-opacity="0.7" stroke="#444" stroke-width="2"/>
+                    
+                    <!-- Símbolo de ángulo recto -->
+                    <path d="M110,190 L110,180 L120,180" fill="none" stroke="#444" stroke-width="2"/>
+                    
+                    <!-- Etiquetas de lados -->
+                    <text x="135" y="215" font-family="'Segoe UI', Arial, sans-serif" font-size="16" font-weight="bold" fill="#444">c</text>
+                    <text x="80" y="160" font-family="'Segoe UI', Arial, sans-serif" font-size="16" font-weight="bold" fill="#444">b</text>
+                    <text x="140" y="170" font-family="'Segoe UI', Arial, sans-serif" font-size="16" font-weight="bold" fill="#444">a</text>
+                    
+                    <!-- Áreas -->
+                    <text x="140" y="250" font-family="'Segoe UI', Arial, sans-serif" font-size="14" fill="#444">a²</text>
+                    <text x="60" y="160" font-family="'Segoe UI', Arial, sans-serif" font-size="14" fill="#444">b²</text>
+                    <text x="180" y="120" font-family="'Segoe UI', Arial, sans-serif" font-size="14" fill="#444">c²</text>
+                    
+                    <!-- Fórmula -->
+                    <text x="240" y="150" font-family="'Segoe UI', Arial, sans-serif" font-size="20" font-weight="bold" fill="#4BAAE0">c² = a² + b²</text>
+                    <text x="240" y="180" font-family="'Segoe UI', Arial, sans-serif" font-size="16" fill="#444">5² = 4² + 3²</text>
+                    <text x="240" y="210" font-family="'Segoe UI', Arial, sans-serif" font-size="16" fill="#444">25 = 9 + 16</text>
+                </svg>
             </div>
         </div>
+
+        <h4>Aplikazioak</h4>
+        <ul>
+            <li>Ezagutzen ez diren luzerak kalkulatu</li>
+            <li>Azalera arazoak ebatzi</li>
+            <li>Eraikuntza eta diseinuko aplikazioak</li>
+        </ul>
+
+        <h4>Adibide Praktikoa</h4>
+        <div class="modal-table-container">
+            <table class="modal-table">
+                <thead>
+                    <tr>
+                        <th>Katetoa b</th>
+                        <th>Katetoa c</th>
+                        <th>Hipotenusa a</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>12</td>
+                        <td>13</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
         
-        <style>
-            .modal-content {
-                font-family: 'Segoe UI', Arial, sans-serif;
-                max-width: 800px;
-                margin: 0 auto;
-                padding: 10px 20px;
-                color: #444;
-                line-height: 1.5;
-            }
-            .modal-section {
-                margin-bottom: 20px;
-            }
-            .modal-table-container {
-                overflow-x: auto;
-                margin-bottom: 15px;
-                border-radius: 8px;
-                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            }
-            .modal-table {
-                width: 100%;
-                border-collapse: collapse;
-                margin-bottom: 15px;
-                background-color: white;
-            }
-            .modal-table th, .modal-table td {
-                border: 1px solid #e6e6e6;
-                padding: 12px;
-                text-align: center;
-            }
-            .modal-table th {
-                background-color: #4BAAE0;
-                color: white;
-                font-weight: 500;
-                font-size: 15px;
-            }
-            .modal-table tr:nth-child(odd) {
-                background-color: #ffffff;
-            }
-            .modal-table tr:nth-child(even) {
-                background-color: #EDF5FA;
-            }
-            h4 {
-                color: #4BAAE0;
-                margin-top: 15px;
-                margin-bottom: 10px;
-                font-size: 18px;
-                font-weight: 500;
-                border-bottom: 2px solid #4BAAE0;
-                padding-bottom: 5px;
-                display: inline-block;
-            }
-            ul {
-                margin-left: 20px;
-                padding-left: 15px;
-                margin-top: 5px;
-            }
-            li {
-                margin-bottom: 8px;
-                position: relative;
-            }
-            p {
-                margin-bottom: 15px;
-            }
-            .formula {
-                font-weight: 500;
-                font-size: 18px;
-            }
-            .formula-container {
-                background-color: #f8f9fa;
-                border-left: 4px solid #4BAAE0;
-                padding: 10px 15px;
-                margin: 10px 0;
-                border-radius: 0 5px 5px 0;
-            }
-            .modal-header h2 {
-                margin-bottom: 5px;
-            }
-        </style>
+<style>
+    .modal-content {
+        font-family: 'Segoe UI', Arial, sans-serif;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 10px 20px;
+        color: #444;
+        line-height: 1.5;
+    }
+    .modal-section {
+        margin-bottom: 20px;
+    }
+    .modal-table-container {
+        overflow-x: auto;
+        margin-bottom: 15px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .modal-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 15px;
+        background-color: white;
+    }
+    .modal-table th, .modal-table td {
+        border: 1px solid #e6e6e6;
+        padding: 12px;
+        text-align: center;
+    }
+    .modal-table th {
+        background-color: #4BAAE0;
+        color: white;
+        font-weight: 500;
+        font-size: 15px;
+    }
+    .modal-table tr:nth-child(odd) {
+        background-color: #ffffff;
+    }
+    .modal-table tr:nth-child(even) {
+        background-color: #EDF5FA;
+    }
+    h4 {
+        color: #4BAAE0;
+        margin-top: 15px;
+        margin-bottom: 10px;
+        font-size: 18px;
+        font-weight: 500;
+        border-bottom: 2px solid #4BAAE0;
+        padding-bottom: 5px;
+        display: inline-block;
+    }
+    ul {
+        margin-left: 20px;
+        padding-left: 15px;
+        margin-top: 5px;
+    }
+    li {
+        margin-bottom: 8px;
+        position: relative;
+    }
+    p {
+        margin-bottom: 15px;
+    }
+    .formula {
+        font-weight: 500;
+        font-size: 18px;
+    }
+    .formula-container {
+        background-color: #f8f9fa;
+        border-left: 4px solid #4BAAE0;
+        padding: 10px 15px;
+        margin: 10px 0;
+        border-radius: 0 5px 5px 0;
+    }
+    .modal-header h2 {
+        margin-bottom: 5px;
+    }
+    /* Estilos para la ilustración */
+    .ilustracion-container {
+        margin: 20px 0;
+    }
+    .pitagoras-ilustracion {
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        border-radius: 8px;
+        overflow: hidden;
+    }
+</style>
     `,
     'areas-perimetros': `
         <div class="modal-content">

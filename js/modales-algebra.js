@@ -102,99 +102,122 @@ x = 17
         `,
         'expresiones-algebraicas': `
             <div class="modal-header">
-                <h2>🔤 Adierazpen aljebraikoak</h2>
-                <button class="btn-cerrar-modal">&times;</button>
-            </div>
-            <div class="modal-body">
-                <h3>Zer da adierazpen aljebraiko bat?</h3>
-                <p>Adierazpen aljebraiko bat zenbakien, letren (aldagaien) eta eragiketen konbinazio bat da.</p>
+    <h2>🔤 Adierazpen aljebraikoak</h2>
+    <button class="btn-cerrar-modal">&times;</button>
+</div>
+<div class="modal-body">
+    <h3>Zer da adierazpen aljebraiko bat?</h3>
+    <p>Adierazpen aljebraiko bat zenbakien, letren (aldagaien) eta eragiketen konbinazio bat da.</p>
+    
+    <!-- Visualización distribuida con explicación a la derecha -->
+    <div style="display: flex; align-items: center; margin-bottom: 20px;">
+        <!-- Visualización SVG -->
+        <div class="visual-example" style="flex: 1;">
+            <svg width="350" height="180" viewBox="0 0 350 180">
+                <!-- Expresión algebraica 3x² - 5y + 7 -->
+                <rect x="50" y="70" width="250" height="70" rx="10" ry="10" fill="#f0f5ff" stroke="#597ef7" stroke-width="2" />
                 
-                <!-- Visualización de componentes de expresiones algebraicas -->
-                <div class="visual-example">
-                    <svg width="400" height="150" viewBox="0 0 400 150">
-                        <!-- Expresión algebraica 3x² - 5y + 7 -->
-                        <rect x="50" y="40" width="300" height="70" rx="10" ry="10" fill="#f0f5ff" stroke="#597ef7" stroke-width="2" />
-                        
-                        <!-- Elementos de la expresión -->
-                        <text x="120" y="80" font-size="24" fill="#333">3x² - 5y + 7</text>
-                        
-                        <!-- Líneas de conexión a etiquetas -->
-                        <line x1="120" y1="90" x2="120" y2="130" stroke="#597ef7" stroke-width="1" stroke-dasharray="3,3" />
-                        <line x1="160" y1="90" x2="160" y2="130" stroke="#597ef7" stroke-width="1" stroke-dasharray="3,3" />
-                        <line x1="200" y1="90" x2="200" y2="130" stroke="#597ef7" stroke-width="1" stroke-dasharray="3,3" />
-                        <line x1="240" y1="90" x2="240" y2="130" stroke="#597ef7" stroke-width="1" stroke-dasharray="3,3" />
-                        <line x1="280" y1="90" x2="280" y2="130" stroke="#597ef7" stroke-width="1" stroke-dasharray="3,3" />
-                        
-                        <!-- Etiquetas -->
-                        <text x="120" y="145" font-size="12" text-anchor="middle" fill="#597ef7">Koefizientea</text>
-                        <text x="160" y="145" font-size="12" text-anchor="middle" fill="#597ef7">Aldagaia</text>
-                        <text x="200" y="145" font-size="12" text-anchor="middle" fill="#597ef7">Eragiketa</text>
-                        <text x="240" y="145" font-size="12" text-anchor="middle" fill="#597ef7">Bestelako aldagaia</text>
-                        <text x="280" y="145" font-size="12" text-anchor="middle" fill="#597ef7">Konstante</text>
-                    </svg>
-                </div>
+                <!-- Elementos de la expresión -->
+                <text x="120" y="110" font-size="24" fill="#333">3x² - 5y + 7</text>
                 
-                <h3>Zer dauka?</h3>
-                <ul>
-                    <li>Letrak → balio ezezagunak adierazten dituzte.</li>
-                    <li>Zenbakiak → ezagunak (koefizienteak).</li>
-                    <li>Eragiketak → batuketa, kenketa, biderketa, etab.</li>
-                </ul>
+                <!-- Líneas de conexión a etiquetas (alternando arriba y abajo) -->
+                <!-- Conexiones arriba -->
+                <line x1="120" y1="70" x2="120" y2="40" stroke="#597ef7" stroke-width="1" stroke-dasharray="3,3" />
+                <line x1="200" y1="70" x2="200" y2="40" stroke="#597ef7" stroke-width="1" stroke-dasharray="3,3" />
+                <line x1="270" y1="70" x2="270" y2="40" stroke="#597ef7" stroke-width="1" stroke-dasharray="3,3" />
+                
+                <!-- Conexiones abajo -->
+                <line x1="140" y1="140" x2="140" y2="170" stroke="#597ef7" stroke-width="1" stroke-dasharray="3,3" />
+                <line x1="240" y1="140" x2="240" y2="170" stroke="#597ef7" stroke-width="1" stroke-dasharray="3,3" />
+                
+                <!-- Etiquetas arriba -->
+                <text x="120" y="30" font-size="12" text-anchor="middle" fill="#597ef7">Koefizientea</text>
+                <text x="200" y="30" font-size="12" text-anchor="middle" fill="#597ef7">Eragiketa</text>
+                <text x="270" y="30" font-size="12" text-anchor="middle" fill="#597ef7">Konstante</text>
+                
+                <!-- Etiquetas abajo -->
+                <text x="140" y="175" font-size="12" text-anchor="middle" fill="#597ef7">Aldagaia</text>
+                <text x="240" y="175" font-size="12" text-anchor="middle" fill="#597ef7">Bestelako aldagaia</text>
+            </svg>
+        </div>
+        
+        <!-- Explicación de componentes -->
+        <div style="flex: 1; padding-left: 20px; border-left: 1px solid #eee;">
+            <h4 style="color: #597ef7;">Osagaiak:</h4>
+            <ul style="list-style-type: none; padding-left: 10px; color: #333;">
+                <li><b style="color: #597ef7;">3</b>: Koefizientea</li>
+                <li><b style="color: #597ef7;">x</b>: Aldagaia</li>
+                <li><b style="color: #597ef7;">²</b>: Berretzailea</li>
+                <li><b style="color: #597ef7;">-</b>: Eragiketa</li>
+                <li><b style="color: #597ef7;">5</b>: Koefizientea</li>
+                <li><b style="color: #597ef7;">y</b>: Bestelako aldagaia</li>
+                <li><b style="color: #597ef7;">+</b>: Eragiketa</li>
+                <li><b style="color: #597ef7;">7</b>: Konstante</li>
+            </ul>
+        </div>
+    </div>
+    
+    <h3>Zer dauka?</h3>
+    <ul>
+        <li>Letrak → balio ezezagunak adierazten dituzte.</li>
+        <li>Zenbakiak → ezagunak (koefizienteak).</li>
+        <li>Eragiketak → batuketa, kenketa, biderketa, etab.</li>
+    </ul>
 
-                <h3>Adibideak</h3>
-                <ul>
-                    <li>3x - 5 → zenbaki baten hirukoitza baino bost gutxiago.</li>
-                    <li>x² + 1 → zenbaki baten karratua gehi bat.</li>
-                    <li>(a + 1)b → "a gehi bat" "b"-rekin biderkatuta.</li>
-                </ul>
-            </div>
+    <h3>Adibideak</h3>
+    <ul>
+        <li>3x - 5 → zenbaki baten hirukoitza baino bost gutxiago.</li>
+        <li>x² + 1 → zenbaki baten karratua gehi bat.</li>
+        <li>(a + 1)b → "a gehi bat" "b"-rekin biderkatuta.</li>
+    </ul>
+</div>
         `,
         'suma-resta-monomios': `
             <div class="modal-header">
-                <h2>➕ Monomioen batuketa eta kenketa</h2>
-                <button class="btn-cerrar-modal">&times;</button>
-            </div>
-            <div class="modal-body">
-                <h3>Oinarrizko arauak</h3>
-                <p>Antzekoak diren monomioak soilik batu edo kendu daitezke, hau da, letrazko zati berdina dutenak (letra berdinak eta esponentzial berdinak).</p>
-                
-                <!-- Visualización de términos semejantes -->
-                <div class="visual-example">
-                    <svg width="400" height="180" viewBox="0 0 400 180">
-                        <!-- Términos semejantes -->
-                        <rect x="50" y="20" width="300" height="70" rx="10" ry="10" fill="#f6ffed" stroke="#52c41a" stroke-width="2" />
-                        <text x="200" y="40" font-size="16" text-anchor="middle" fill="#333">Antzeko monomioak</text>
-                        <text x="200" y="65" font-size="20" text-anchor="middle" fill="#52c41a">4x + 2x = 6x</text>
-                        
-                        <!-- Términos no semejantes -->
-                        <rect x="50" y="100" width="300" height="70" rx="10" ry="10" fill="#fff2e8" stroke="#fa541c" stroke-width="2" />
-                        <text x="200" y="120" font-size="16" text-anchor="middle" fill="#333">Antzekoak EZ diren monomioak</text>
-                        <text x="200" y="145" font-size="20" text-anchor="middle" fill="#fa541c">3a + 2b = 3a + 2b</text>
-                        <text x="200" y="170" font-size="12" text-anchor="middle" fill="#666">(Ezin dira batu)</text>
-                    </svg>
-                </div>
-                
-                <h3>Antzeko monomioak</h3>
-                <ul>
-                    <li>4x eta 2x → batzen dira → 4x + 2x = 6x</li>
-                    <li>a² eta 3a² → batzen dira → a² + 3a² = 4a²</li>
-                </ul>
+    <h2>➕ Monomioen batuketa eta kenketa</h2>
+    <button class="btn-cerrar-modal">&times;</button>
+</div>
+<div class="modal-body">
+    <h3>Oinarrizko arauak</h3>
+    <p>Antzekoak diren monomioak soilik batu edo kendu daitezke, hau da, letrazko zati berdina dutenak (letra berdinak eta esponentzial berdinak).</p>
+    
+    <!-- Visualización de términos semejantes -->
+    <div class="visual-example">
+        <svg width="400" height="180" viewBox="0 0 400 180">
+            <!-- Términos semejantes -->
+            <rect x="50" y="20" width="300" height="70" rx="10" ry="10" fill="#f6ffed" stroke="#52c41a" stroke-width="2" />
+            <text x="200" y="40" font-size="16" text-anchor="middle" fill="#333">Antzeko monomioak</text>
+            <text x="200" y="65" font-size="20" text-anchor="middle" fill="#52c41a">4x + 2x = 6x</text>
+            
+            <!-- Términos no semejantes -->
+            <rect x="50" y="100" width="300" height="70" rx="10" ry="10" fill="#fff2e8" stroke="#fa541c" stroke-width="2" />
+            <text x="200" y="120" font-size="16" text-anchor="middle" fill="#333">Antzekoak EZ diren monomioak</text>
+            <text x="200" y="145" font-size="20" text-anchor="middle" fill="#fa541c">3a + 2b = 3a + 2b</text>
+            <text x="200" y="165" font-size="12" text-anchor="middle" fill="#666">(Ezin dira batu)</text>
+        </svg>
+    </div>
+    
+    <h3>Antzeko monomioak</h3>
+    <ul>
+        <li>4x eta 2x → batzen dira → 4x + 2x = 6x</li>
+        <li>a² eta 3a² → batzen dira → a² + 3a² = 4a²</li>
+    </ul>
 
-                <h3>Antzekoak EZ diren monomioak</h3>
-                <ul>
-                    <li>3a + 2b → horrela uzten da, ezin dira batu</li>
-                    <li>x² + x → ez dira batzen esponentzial desberdina dutelako</li>
-                </ul>
+    <h3>Antzekoak EZ diren monomioak</h3>
+    <ul>
+        <li>3a + 2b → horrela uzten da, ezin dira batu</li>
+        <li>x² + x → ez dira batzen esponentzial desberdina dutelako</li>
+    </ul>
 
-                <h3>Adibideak</h3>
-                <ul>
-                    <li>a + a + a = 3a</li>
-                    <li>5x – 3x = 2x</li>
-                    <li>a² + a² = 2a²</li>
-                    <li>7x – (2x + x) = 7x – 3x = 4x</li>
-                    <li>5a – (a – 4a) = 5a – (–3a) = 8a</li>
-                </ul>
-            </div>
+    <h3>Adibideak</h3>
+    <ul>
+        <li>a + a + a = 3a</li>
+        <li>5x – 3x = 2x</li>
+        <li>a² + a² = 2a²</li>
+        <li>7x – (2x + x) = 7x – 3x = 4x</li>
+        <li>5a – (a – 4a) = 5a – (–3a) = 8a</li>
+    </ul>
+</div>
         `,
         'multiplicacion-monomios': `
             <div class="modal-header">
@@ -285,34 +308,6 @@ x = 17
             </div>
             <div class="modal-body">
                 <p>Monomioen zatiketa esponentzialen eta zeinuen arau zehatzei jarraituz egiten da.</p>
-                
-                <!-- Visualización del proceso de división -->
-                <div class="visual-example">
-                    <svg width="400" height="200" viewBox="0 0 400 200">
-                        <!-- Marco principal -->
-                        <rect x="30" y="20" width="340" height="170" rx="10" ry="10" fill="#e6fffb" stroke="#13c2c2" stroke-width="2" />
-                        
-                        <!-- Ejemplo 1: 6x³/2x = 3x² -->
-                        <path d="M100,60 L300,60 L300,100 L100,100 Z" fill="none" stroke="#13c2c2" stroke-width="1" />
-                        <line x1="100" y1="80" x2="300" y2="80" stroke="#13c2c2" stroke-width="1" />
-                        <text x="200" y="50" font-size="14" text-anchor="middle" fill="#333">Adibidea 1</text>
-                        <text x="200" y="75" font-size="16" text-anchor="middle" fill="#13c2c2">6x³</text>
-                        <text x="200" y="95" font-size="16" text-anchor="middle" fill="#13c2c2">2x</text>
-                        <text x="320" y="80" font-size="16" text-anchor="middle" fill="#13c2c2">= 3x²</text>
-                        
-                        <!-- Ejemplo 2: 15a²/-3a = -5a -->
-                        <path d="M100,120 L300,120 L300,160 L100,160 Z" fill="none" stroke="#13c2c2" stroke-width="1" />
-                        <line x1="100" y1="140" x2="300" y2="140" stroke="#13c2c2" stroke-width="1" />
-                        <text x="200" y="115" font-size="14" text-anchor="middle" fill="#333">Adibidea 2</text>
-                        <text x="200" y="135" font-size="16" text-anchor="middle" fill="#13c2c2">15a²</text>
-                        <text x="200" y="155" font-size="16" text-anchor="middle" fill="#13c2c2">-3a</text>
-                        <text x="320" y="140" font-size="16" text-anchor="middle" fill="#13c2c2">= -5a</text>
-                        
-                        <!-- Explicación -->
-                        <text x="200" y="180" font-size="12" text-anchor="middle" fill="#333">Koefizienteak zatitu eta aldagaien esponentzialak kendu</text>
-                    </svg>
-                </div>
-
                 <div class="math-examples">
                     <div class="math-row">
                         <div class="math-expression">
@@ -358,8 +353,8 @@ x = 17
                     <svg width="400" height="180" viewBox="0 0 400 180">
                         <!-- Balanza -->
                         <line x1="200" y1="60" x2="200" y2="100" stroke="#333" stroke-width="4" />
-                        <line x1="140" y1="100" x2="260" y2="100" stroke="#333" stroke-width="4" />
-                        <line x1="100" y1="120" x2="300" y2="120" stroke="#333" stroke-width="2" />
+                        <line x1="160" y1="100" x2="240" y2="100" stroke="#333" stroke-width="4" />
+                        <line x1="120" y1="120" x2="280" y2="120" stroke="#333" stroke-width="2" />
                         
                         <!-- Platillos de la balanza -->
                         <rect x="80" y="120" width="80" height="5" fill="#ffd666" stroke="#ad8b00" stroke-width="1" />
@@ -393,6 +388,14 @@ x = 17
             <div class="modal-body">
                 <h3>Lehen graduko ekuazioak ebazteko metodoa</h3>
                 <p>Lehen mailko ekuazioak ebazteko pausoak hurrengokoak dira:</p>
+
+                <h3>Pausoak</h3>
+                <ol>
+                    <li>Parentesiak kendu (baldin badaude).</li>
+                    <li>Antzeko terminoak murriztu alde bakoitzean.</li>
+                    <li>Ezezagunak alde batera eta zenbakiak bestera pasatu.</li>
+                    <li>Ezezaguna askatu.</li>
+                </ol>
                 
                 <!-- Visualización de los pasos para resolver ecuaciones -->
                 <div class="visual-example">
@@ -425,21 +428,7 @@ x = 17
                     </svg>
                 </div>
                 
-                <h3>Pausoak</h3>
-                <ol>
-                    <li>Parentesiak kendu (baldin badaude).</li>
-                    <li>Antzeko terminoak murriztu alde bakoitzean.</li>
-                    <li>Ezezagunak alde batera eta zenbakiak bestera pasatu.</li>
-                    <li>Ezezaguna askatu.</li>
-                </ol>
-
-                <h3>Adibidea</h3>
-                <pre>
-4 + 2x = x + 10
-→ 2x - x = 10 - 4
-→ x = 6
-                </pre>
-                <p>✅ Soluzioa: x = 6</p>
+                
             </div>
         `,
         'ecuaciones-primer-grado': `
@@ -491,50 +480,53 @@ x = 17
         `,
         'problemas-ecuaciones': `
             <div class="modal-header">
-                <h2>💡 Ekuazioekin problemak</h2>
-                <button class="btn-cerrar-modal">&times;</button>
-            </div>
-            <div class="modal-body">
-                <h3>Hizkuntza aljebraikora itzulpena</h3>
-                <p>Hau da zatirik interesgarriena: benetako problemak hizkuntza aljebraikora itzultzea.</p>
-                
-                <!-- Visualización del problema de las monedas -->
-                <div class="visual-example">
-                    <svg width="400" height="200" viewBox="0 0 400 200">
-                        <!-- Marco del problema -->
-                        <rect x="50" y="20" width="300" height="170" rx="10" ry="10" fill="#fcffe6" stroke="#a0d911" stroke-width="2" />
-                        
-                        <!-- Representación de la pila de monedas -->
-                        <circle cx="130" cy="70" r="20" fill="#fffb8f" stroke="#d4b106" stroke-width="1" />
-                        <circle cx="140" cy="80" r="20" fill="#fffb8f" stroke="#d4b106" stroke-width="1" />
-                        <circle cx="120" cy="80" r="20" fill="#fffb8f" stroke="#d4b106" stroke-width="1" />
-                        <circle cx="130" cy="90" r="20" fill="#fffb8f" stroke="#d4b106" stroke-width="1" />
-                        <text x="130" y="85" font-size="14" text-anchor="middle" fill="#d4b106">€</text>
-                        
-                        <!-- Séptima parte -->
-                        <circle cx="270" cy="80" r="20" fill="#fffb8f" stroke="#d4b106" stroke-width="1" />
-                        <text x="270" y="85" font-size="14" text-anchor="middle" fill="#d4b106">€</text>
-                        <text x="270" y="110" font-size="12" text-anchor="middle" fill="#333">1/7 zatia</text>
-                        
-                        <!-- Ecuación del problema -->
-                        <text x="200" y="150" font-size="16" text-anchor="middle" fill="#333">x + (1/7)x = 24</text>
-                        <text x="200" y="180" font-size="16" text-anchor="middle" fill="#a0d911">x = 21</text>
-                    </svg>
-                </div>
-                
-                <h3>Liburuko adibidea</h3>
-                <p>"Txanpon pilo bat eta piloaren zazpigarren bat 24 euro balio dute."</p>
-                <p>Piloaren balioari x deitzen diogu:</p>
-                <pre>
-x + (1/7)x = 24
-                </pre>
-                <p>Murrizten dugu:</p>
-                <pre>
-(8/7)x = 24
-x = 24 × 7 / 8 = 21
-                </pre>
-                <p>✅ Piloak 21 euro balio ditu.</p>
-            </div>
+    <h2>💡 Ekuazioekin problemak</h2>
+    <button class="btn-cerrar-modal">&times;</button>
+</div>
+<div class="modal-body">
+    <h3>Hizkuntza aljebraikora itzulpena</h3>
+    <p>Hau da zatirik interesgarriena: benetako problemak hizkuntza aljebraikora itzultzea.</p>
+    
+    <!-- Visualización del problema de las monedas -->
+    <div class="visual-example">
+        <svg width="400" height="200" viewBox="0 0 400 200">
+            <!-- Marco del problema -->
+            <rect x="50" y="20" width="300" height="170" rx="10" ry="10" fill="#fcffe6" stroke="#a0d911" stroke-width="2" />
+            
+            <!-- Representación de la pila de monedas principal -->
+            <circle cx="130" cy="70" r="20" fill="#fffb8f" stroke="#d4b106" stroke-width="1" />
+            <circle cx="140" cy="80" r="20" fill="#fffb8f" stroke="#d4b106" stroke-width="1" />
+            <circle cx="120" cy="80" r="20" fill="#fffb8f" stroke="#d4b106" stroke-width="1" />
+            <circle cx="130" cy="90" r="20" fill="#fffb8f" stroke="#d4b106" stroke-width="1" />
+            <text x="130" y="85" font-size="14" text-anchor="middle" fill="#d4b106">€</text>
+            
+            <!-- Monedas adicionales -->
+            <circle cx="250" cy="70" r="20" fill="#fffb8f" stroke="#d4b106" stroke-width="1" />
+            <circle cx="270" cy="70" r="20" fill="#fffb8f" stroke="#d4b106" stroke-width="1" />
+            <circle cx="290" cy="70" r="20" fill="#fffb8f" stroke="#d4b106" stroke-width="1" />
+            <circle cx="260" cy="90" r="20" fill="#fffb8f" stroke="#d4b106" stroke-width="1" />
+            <circle cx="280" cy="90" r="20" fill="#fffb8f" stroke="#d4b106" stroke-width="1" />
+            <text x="270" y="85" font-size="14" text-anchor="middle" fill="#d4b106">€</text>
+            <text x="270" y="120" font-size="12" text-anchor="middle" fill="#333">5 txanpon gehiago</text>
+            
+            <!-- Ecuación del problema -->
+            <text x="200" y="150" font-size="16" text-anchor="middle" fill="#333">x + 5 = 20</text>
+            <text x="200" y="180" font-size="16" text-anchor="middle" fill="#a0d911">x = 15</text>
+        </svg>
+    </div>
+    
+    <h3>Liburuko adibidea</h3>
+    <p>"Txanpon kopuru ezezagun bat eta 5 txanpon gehiago guztira 20 euro dira."</p>
+    <p>Txanpon kopuru ezezagunari x deitzen diogu:</p>
+    <pre>
+x + 5 = 20
+    </pre>
+    <p>Ebazten dugu:</p>
+    <pre>
+x = 20 - 5 = 15
+    </pre>
+    <p>✅ Tanpon kopuru ezezagunak 15 euro balio ditu.</p>
+</div>
         `
     };
 

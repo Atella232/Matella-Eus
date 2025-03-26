@@ -454,43 +454,44 @@ const modalContents = {
                 
                 <!-- Representación visual del orden de operaciones -->
                 <div class="visual-element" style="text-align: center; margin: 20px 0;">
-                    <svg width="400" height="250" viewBox="0 0 400 250">
+                    <svg width="500" height="200" viewBox="0 0 500 200">
                         <!-- Título -->
-                        <text x="200" y="30" font-size="16" font-weight="bold" text-anchor="middle">6 + 2 × 4 = ?</text>
+                        <text x="250" y="30" font-size="16" font-weight="bold" text-anchor="middle">6 + 2 × 4 = ?</text>
                         
                         <!-- Diagrama de árbol -->
                         <g transform="translate(50, 60)">
-                            <!-- Nodos -->
+                            <!-- Nodos de operaciones (a la misma altura) -->
                             <circle cx="150" cy="30" r="25" fill="#fff9c4" stroke="#fbc02d" stroke-width="2"></circle>
                             <text x="150" y="35" font-size="16" text-anchor="middle">+</text>
                             
-                            <circle cx="80" cy="90" r="25" fill="#e0f7fa" stroke="#0097a7" stroke-width="2"></circle>
-                            <text x="80" y="95" font-size="16" text-anchor="middle">6</text>
+                            <circle cx="270" cy="30" r="25" fill="#fff9c4" stroke="#fbc02d" stroke-width="2"></circle>
+                            <text x="270" y="35" font-size="16" text-anchor="middle">×</text>
                             
-                            <circle cx="220" cy="90" r="25" fill="#fff9c4" stroke="#fbc02d" stroke-width="2"></circle>
-                            <text x="220" y="95" font-size="16" text-anchor="middle">×</text>
+                            <!-- Nodos de números (todos a la misma altura) -->
+                            <circle cx="90" cy="110" r="25" fill="#e0f7fa" stroke="#0097a7" stroke-width="2"></circle>
+                            <text x="90" y="115" font-size="16" text-anchor="middle">6</text>
                             
-                            <circle cx="180" cy="150" r="25" fill="#e0f7fa" stroke="#0097a7" stroke-width="2"></circle>
-                            <text x="180" y="155" font-size="16" text-anchor="middle">2</text>
+                            <circle cx="210" cy="110" r="25" fill="#e0f7fa" stroke="#0097a7" stroke-width="2"></circle>
+                            <text x="210" y="115" font-size="16" text-anchor="middle">2</text>
                             
-                            <circle cx="260" cy="150" r="25" fill="#e0f7fa" stroke="#0097a7" stroke-width="2"></circle>
-                            <text x="260" y="155" font-size="16" text-anchor="middle">4</text>
+                            <circle cx="330" cy="110" r="25" fill="#e0f7fa" stroke="#0097a7" stroke-width="2"></circle>
+                            <text x="330" y="115" font-size="16" text-anchor="middle">4</text>
                             
                             <!-- Conectores -->
-                            <line x1="135" y1="50" x2="95" y2="70" stroke="black" stroke-width="2"></line>
-                            <line x1="165" y1="50" x2="205" y2="70" stroke="black" stroke-width="2"></line>
-                            <line x1="205" y1="110" x2="195" y2="130" stroke="black" stroke-width="2"></line>
-                            <line x1="235" y1="110" x2="245" y2="130" stroke="black" stroke-width="2"></line>
+                            <line x1="135" y1="45" x2="105" y2="90" stroke="black" stroke-width="2"></line>
+                            <line x1="165" y1="45" x2="195" y2="90" stroke="black" stroke-width="2"></line>
+                            <line x1="255" y1="45" x2="225" y2="90" stroke="black" stroke-width="2"></line>
+                            <line x1="285" y1="45" x2="315" y2="90" stroke="black" stroke-width="2"></line>
                             
-                            <!-- Etiquetas de pasos -->
-                            <text x="230" y="120" font-size="14" text-anchor="middle" fill="#d81b60">1. Lehenengo</text>
-                            <text x="320" y="90" font-size="14" text-anchor="middle" fill="#d81b60">2 × 4 = 8</text>
+                            <!-- Etiquetas de pasos (reposicionadas) -->
+                            <text x="270" y="0" font-size="14" text-anchor="middle" fill="#d81b60">1. Lehenengo</text>
+                            <text x="390" y="70" font-size="14" text-anchor="middle" fill="#d81b60">2 × 4 = 8</text>
                             
-                            <text x="100" y="30" font-size="14" text-anchor="middle" fill="#d81b60">2. Bigarren</text>
-                            <text x="30" y="90" font-size="14" text-anchor="middle" fill="#d81b60">6 + 8 = 14</text>
+                            <text x="150" y="0" font-size="14" text-anchor="middle" fill="#d81b60">2. Bigarren</text>
+                            <text x="40" y="70" font-size="14" text-anchor="middle" fill="#d81b60">6 + 8 = 14</text>
                         </g>
                     </svg>
-                    <p style="font-style: italic; margin-top: 5px;">Eragiketen ordenaren zuhaitza: lehenengo biderketa, gero batuketa</p>
+                    <p style="font-style: italic; margin-top: 0px;">Eragiketen ordenaren zuhaitza: lehenengo biderketa, gero batuketa</p>
                 </div>
                 
                 <div class="modal-table-container">
